@@ -35,7 +35,7 @@ function _test () {
     }
     console.log('DONE');
   };
-  _xhttp.open('GET', 'https://5eef-2401-d800-7ce0-4530-98a2-64c5-f7c2-e574.ngrok.io/test/question', true);
+  _xhttp.open('GET', 'https://vpe-production.up.railway.app/test/question', true);
   _xhttp.send();
 }
 
@@ -45,7 +45,7 @@ function _insert (data) {
     let response = JSON.parse(this.responseText);
     console.log('DONE');
   };
-  _xhttp.open('POST', 'https://5eef-2401-d800-7ce0-4530-98a2-64c5-f7c2-e574.ngrok.io/test/question', true);
+  _xhttp.open('POST', 'https://vpe-production.up.railway.app/test/question', true);
   _xhttp.setRequestHeader('content-type', 'application/json');
   _xhttp.send(JSON.stringify({data: data}));
   // _xhttp.send();
