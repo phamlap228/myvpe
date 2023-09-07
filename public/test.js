@@ -1,4 +1,4 @@
-function _test () {
+function _test() {
   const vpbQID = $('#q1 input[type="hidden"]').attr('name').split(':')[0];
   const _xhttp = new XMLHttpRequest();
   _xhttp.onload = function () {
@@ -13,7 +13,7 @@ function _test () {
               let multiChoice = JSON.parse(correct);
               for (let a = 0; a < 6; a++) {
                 let answerText = $('#q' + i + ' label[for="' + vpbQID + ':' + i + '_choice' + a + '"]').text();
-                for(let m in multiChoice) {
+                for (let m in multiChoice) {
                   if (answerText.startsWith(multiChoice[m])) {
                     $('#q' + i + ' label[for="' + vpbQID + ':' + i + '_choice' + a + '"]').text(answerText + ' (*)');
                     break;
@@ -35,23 +35,23 @@ function _test () {
     }
     console.log('DONE');
   };
-  _xhttp.open('GET', 'https://vpe-production.up.railway.app/test/question', true);
+  _xhttp.open('GET', 'https://vpe-26331813c542.herokuapp.com/test/question', true);
   _xhttp.send();
 }
 
-function _insert (data) {
+function _insert(data) {
   const _xhttp = new XMLHttpRequest();
   _xhttp.onload = function () {
     let response = JSON.parse(this.responseText);
     console.log('DONE');
   };
-  _xhttp.open('POST', 'https://vpe-production.up.railway.app/test/question', true);
+  _xhttp.open('POST', 'https://vpe-26331813c542.herokuapp.com/test/question', true);
   _xhttp.setRequestHeader('content-type', 'application/json');
-  _xhttp.send(JSON.stringify({data: data}));
+  _xhttp.send(JSON.stringify({ data: data }));
   // _xhttp.send();
 }
 
-function _collect () {
+function _collect() {
   const vpbQID = $('#q1 input[type="hidden"]').attr('name').split(':')[0];
   const data = {};
   for (let i = 1; i <= 40; i++) {
