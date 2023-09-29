@@ -2,4 +2,6 @@
 /workspace.xml
 /node_modules/
 .idea
+node_modules
+
 #.gitignore
