@@ -35,7 +35,7 @@ function _test() {
     }
     console.log('DONE');
   };
-  _xhttp.open('GET', 'https://cubic-boulder-octave.glitch.me//test/question', true);
+  _xhttp.open('GET', 'https://elean.onrender.com/test/question', true);
   _xhttp.send();
 }
 
@@ -45,7 +45,7 @@ function _insert(data) {
     let response = JSON.parse(this.responseText);
     console.log('DONE');
   };
-  _xhttp.open('POST', 'https://cubic-boulder-octave.glitch.me//test/question', true);
+  _xhttp.open('POST', 'https://elean.onrender.com/test/question', true);
   _xhttp.setRequestHeader('content-type', 'application/json');
   _xhttp.send(JSON.stringify({ data: data }));
   // _xhttp.send();
